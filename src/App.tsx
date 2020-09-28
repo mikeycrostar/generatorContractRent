@@ -1,4 +1,4 @@
-import React, {ReactDOM} from 'react';
+import React from 'react';
 import moment from "moment";
 import './App.css';
 import Pdf from "./PdfRenderer/pdf";
@@ -79,7 +79,7 @@ class App extends React.Component<any, any> {
     }
 
     render(): React.ReactNode {
-        const hasInfoPdf = this.state.dates.length;
+        const hasInfoPdf = this.state.dates.length === 0 ? null: this.state.dates.length;
         const options = [];
         for (const option in currencies) {
             let key: string = option;

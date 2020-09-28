@@ -21,7 +21,6 @@ class Pdf extends React.Component<any, any> {
     render(): React.ReactNode {
         const {data: {dates, landlord, cost, costWords, currency, tenant, addressTenant, city, file }} = this.props;
         const doc = dates.map((date: any, index: number) => {
-            const months = moment(date).format("MM/YYYY");
             const monthsWords = moment(date).format("MMMM YYYY");
             const dateOfTheDay = moment(date).format("DD/MM/YYYY");
             const MonthsFirstDay = moment(date).startOf("month").format("DD/MM/YYYY");
